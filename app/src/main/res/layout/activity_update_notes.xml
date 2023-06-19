@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.AddNotesActivity"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+    // Layout principal
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        //Titre note
+        <EditText
+            android:id="@+id/titreNote_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_edit_text"
+            android:hint="Titre de la note..."
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="#43444A" />
+
+        //Niveau de priorite
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:text="Niveau de priorité"
+                android:textColor="#191b27"
+                android:textSize="17dp" />
+
+            //Layout Favoris
+            <LinearLayout
+                android:id="@+id/favory_priority"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_baseline_favorite_24" />
+
+                <TextView
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Favoris"
+                    android:textColor="#191b27"
+                    android:paddingBottom="5dp"
+                    android:textSize="10dp" />
+            </LinearLayout>
+
+            //Layout Important
+            <LinearLayout
+                android:id="@+id/turned_priority"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_baseline_turned_in_24" />
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="Important"
+                    android:textColor="#191b27"
+                    android:textSize="10dp"
+                    android:paddingBottom="5dp"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+            //Layout Commentaire
+            <LinearLayout
+                android:id="@+id/comment_priority"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_baseline_mode_comment_24" />
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="Commentaire"
+                    android:textColor="#191b27"
+                    android:textSize="10dp"
+                    android:paddingBottom="5dp"
+                    android:gravity="center" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/noteTotale_update"
+            android:layout_width="match_parent"
+            android:layout_height="460dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_edit_text"
+            android:gravity="start"
+            android:hint="Notes..."
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="#43444A" />
+
+    </LinearLayout>
+
+
+    // Bouton Modification
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnUpdateNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="26dp"
+        android:backgroundTint="@color/gree_important"
+        android:src="@drawable/note_save" />
+
+</RelativeLayout>

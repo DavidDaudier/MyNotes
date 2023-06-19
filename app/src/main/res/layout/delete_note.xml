@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:id="@+id/deleteNote"
+    android:background="#0f121b"
+    android:paddingBottom="100dp">
+
+    <View
+        android:layout_width="100dp"
+        android:layout_height="10dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/indicator_delete"/>
+
+    // LinearLayout principal de Message alerte de suppression
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="left"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="30dp">
+
+        //Image Titre Alerte
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_baseline_notification_important_24" />
+
+        //Text Alerte
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="left"
+            android:textColor="#68696b"
+            android:fontFamily="@font/gothic_bold"
+            android:text="Suppression note"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:layout_marginStart="20dp"
+        android:text="Voulez-vous supprimer cette note ?"
+        android:textSize="15dp"
+        android:fontFamily="@font/gothic_regular"
+        android:textColor="#fff"
+        android:layout_marginBottom="10dp"/>
+
+    //Layout affichage infos Supprimer
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="right"
+        android:layout_margin="10dp">
+
+        //Layout bouton NON
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/delete_no"
+            android:gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:padding="5dp"
+            android:outlineSpotShadowColor="#3369fd">
+
+            //Image Non
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginStart="15dp"
+                android:src="@drawable/ic_baseline_thumb_down_24" />
+
+            //Text Non
+            <TextView
+                android:id="@+id/delte_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:fontFamily="@font/gothic_bold"
+                android:letterSpacing=".1"
+                android:text="Non"
+                android:textSize="17dp" />
+
+        </LinearLayout>
+
+        //Layout bouton OUI
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/delete_yes"
+            android:gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:padding="5dp"
+            android:outlineSpotShadowColor="#3369fd">
+
+            //Image Oui
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginStart="15dp"
+                android:src="@drawable/ic_baseline_thumb_up_24" />
+
+            //Text Oui
+            <TextView
+                android:id="@+id/delete_yes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Oui"
+                android:textSize="17dp"
+                android:fontFamily="@font/gothic_bold"
+                android:letterSpacing=".1"
+                android:gravity="center"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
